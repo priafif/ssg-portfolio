@@ -1,15 +1,8 @@
 # Cloudflare Pages Configuration
-# Deploy configuration for Cloudflare Pages
+# https://developers.cloudflare.com/pages/platform/builds/build-configuration/
 
-name = "ssg-portfolio"
-type = "javascript"
+pages_build_output_dir = "dist"
 
 [build]
 command = "npm run build"
-
-[build.upload]
-dir = "dist"
-
-# Environment variables (optional)
-# [env.production]
-# vars = { ENVIRONMENT = "production" }
+cwd = "."
