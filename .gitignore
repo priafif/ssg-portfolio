@@ -1,0 +1,39 @@
+# Build output
+dist/
+*.log
+
+# Dependencies
+node_modules/
+package-lock.json
+yarn.lock
+
+# Development
+.DS_Store
+.env
+.env.local
+.vscode/settings.json
+.idea/
+
+# Editor
+*.swp
+*.swo
+*~
+.sublime-project
+.sublime-workspace
+
+# OS
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary files
+tmp/
+temp/
+*.tmp

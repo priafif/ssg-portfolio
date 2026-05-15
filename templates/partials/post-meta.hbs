@@ -1,0 +1,8 @@
+<div class="post-meta-info">
+    <p>
+        <strong>Posted by:</strong> {{author}}<br>
+        <strong>Date:</strong> {{formatDate date}}<br>
+        {{#if tags}}<strong>Tags:</strong> 
+        {{#each tags}}<a href="/tags/{{this}}">{{this}}</a>{{#unless @last}}, {{/unless}}{{/each}}<br>{{/if}}
+    </p>
+</div>

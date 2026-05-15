@@ -1,0 +1,13 @@
+<header class="site-header">
+    <div class="header-content">
+        <div class="logo">
+            <h1 class="site-title">{{siteTitle}}</h1>
+            <p class="site-tagline">{{description}}</p>
+        </div>
+        <nav class="site-nav">
+            {{#each navigation}}
+            <a href="{{this.url}}" class="nav-link">{{this.label}}</a>
+            {{/each}}
+        </nav>
+    </div>
+</header>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <meta property="og:title" content="{{title}} - {{siteTitle}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{url}}/images/og-image.png">
+    <meta property="og:url" content="{{url}}{{path}}">
+    <meta name="twitter:creator" content="@{{twitterHandle}}">
+    <title>{{title}} - {{siteTitle}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    {{> header}}
+    
+    <main class="container">
+        <article class="post">
+            <header class="post-header">
+                <h1 class="post-title">{{title}}</h1>
+                <div class="post-meta">
+                    <span class="author">By {{author}}</span>
+                    <span class="date">{{formatDate date}}</span>
+                </div>
+                {{#if tags}}
+                <div class="tags">
+                    {{#each tags}}
+                    <span class="tag">{{this}}</span>
+                    {{/each}}
+                </div>
+                {{/if}}
+            </header>
+            
+            <div class="post-content">
+                {{{content}}}
+            </div>
+            
+            <footer class="post-footer">
+                {{> post-meta}}
+            </footer>
+        </article>
+    </main>
+    
+    {{> footer}}
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>

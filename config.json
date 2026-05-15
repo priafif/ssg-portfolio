@@ -1,0 +1,44 @@
+{
+  "title": "My Portfolio",
+  "author": "Your Name",
+  "description": "Personal portfolio and blog showcasing my projects and insights",
+  "url": "https://myportfolio.com",
+  "domain": "myportfolio.com",
+  "language": "en",
+  "postsPerPage": 10,
+  "theme": "default",
+  "yearStarted": 2024,
+  "social": {
+    "twitter": "your_handle",
+    "github": "your_username",
+    "linkedin": "your_profile",
+    "email": "your.email@example.com"
+  },
+  "navigation": [
+    {
+      "label": "Home",
+      "url": "/"
+    },
+    {
+      "label": "Blog",
+      "url": "/blog/"
+    },
+    {
+      "label": "Projects",
+      "url": "/projects/"
+    },
+    {
+      "label": "About",
+      "url": "/about/"
+    },
+    {
+      "label": "Contact",
+      "url": "/contact/"
+    }
+  ],
+  "seo": {
+    "og:image": "/images/og-image.png",
+    "twitter:creator": "@your_handle",
+    "canonical": true
+  }
+}
