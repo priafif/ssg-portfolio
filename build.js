@@ -213,6 +213,21 @@ async function build() {
     console.log();
     copyAssets();
     
+    // Generate homepage
+    console.log('📄 Generating homepage...');
+    const indexLayoutPath = path.join(TEMPLATES_DIR, 'layouts', 'index.hbs');
+    if (fs.existsSync(indexLayoutPath)) {
+      const indexLayoutContent = fs.readFileSync(indexLayoutPath, 'utf-8');
+      const indexTemplate = handlebars.compile(indexLayoutContent);
+      const indexOutput = indexTemplate({
+        ...config,
+        posts: mdFiles.map(f => f.replace('.md', '')),
+        currentYear: new Date().getFullYear()
+      });
+      fs.writeFileSync(path.join(OUTPUT_DIR, 'index.html'), indexOutput);
+      console.log('✓ Homepage generated');
+    }
+    
     console.log(`\n✨ Build complete! Output in ${OUTPUT_DIR}/`);
     console.log('\nNext steps:');
     console.log('  • Review: open dist/blog/*/index.html in browser');

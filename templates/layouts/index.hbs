@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="{{language}}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{description}}">
+    <meta property="og:title" content="{{title}}">
+    <meta property="og:description" content="{{description}}">
+    <meta property="og:image" content="{{url}}/images/og-image.png">
+    <meta property="og:url" content="{{url}}/">
+    <meta name="twitter:creator" content="@{{social.twitter}}">
+    <title>{{title}} - {{description}}</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    {{> header}}
+    
+    <main class="container">
+        <section class="hero">
+            <h1>{{title}}</h1>
+            <p class="subtitle">{{description}}</p>
+        </section>
+        
+        <section class="recent-posts">
+            <h2>Recent Posts</h2>
+            {{#if posts}}
+            <div class="posts-grid">
+                {{#each posts}}
+                <article class="post-card">
+                    <h3><a href="/blog/{{this}}/">{{this}}</a></h3>
+                    <p><a href="/blog/{{this}}/">Read more →</a></p>
+                </article>
+                {{/each}}
+            </div>
+            {{else}}
+            <p>No posts yet. Check back soon!</p>
+            {{/if}}
+        </section>
+    </main>
+    
+    {{> footer}}
+    
+    <script src="/js/main.js"></script>
+</body>
+</html>
