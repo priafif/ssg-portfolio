@@ -1,21 +1,15 @@
 # Cloudflare Pages Configuration
 # Deploy configuration for Cloudflare Pages
 
-[env.production]
 name = "ssg-portfolio"
 type = "javascript"
 
-# Build command that Cloudflare will run
-build:
-  command = "npm run build"
+[build]
+command = "npm run build"
 
-# Directory where build output is located
-build:
-  output_directory = "dist"
+[build.upload]
+dir = "dist"
 
 # Environment variables (optional)
-# env = { ENVIRONMENT = "production" }
-
-# Triggers for automatic deployment (optional)
-# triggers:
-#   branches = ["main"]
+# [env.production]
+# vars = { ENVIRONMENT = "production" }
