@@ -1,8 +1,0 @@
-# Cloudflare Pages Configuration
-# https://developers.cloudflare.com/pages/platform/builds/build-configuration/
-
-pages_build_output_dir = "dist"
-
-[build]
-command = "npm run build"
-cwd = "."
