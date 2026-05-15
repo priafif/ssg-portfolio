@@ -15,26 +15,11 @@
     "email": "your.email@example.com"
   },
   "navigation": [
-    {
-      "label": "Home",
-      "url": "/"
-    },
-    {
-      "label": "Blog",
-      "url": "/blog/"
-    },
-    {
-      "label": "Projects",
-      "url": "/projects/"
-    },
-    {
-      "label": "About",
-      "url": "/about/"
-    },
-    {
-      "label": "Contact",
-      "url": "/contact/"
-    }
+    { "label": "Home", "url": "/" },
+    { "label": "Blog", "url": "/blog/" },
+    { "label": "SSG Portfolio", "url": "/ssg-portfolio.html" },
+    { "label": "About", "url": "/about.html" },
+    { "label": "Contact", "url": "/contact.html" }
   ],
   "seo": {
     "og:image": "/images/og-image.png",

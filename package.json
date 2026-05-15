@@ -4,12 +4,11 @@
   "description": "A lightweight static site generator for portfolio and blog websites",
   "main": "build.js",
   "scripts": {
-    "build": "node build.js",
-    "dev": "nodemon --exec \"npm run build\" --watch contents --watch templates --watch assets --watch config.json",
+    "build": "npm run clean && node build.js",
+    "dev": "nodemon --exec \"node build.js\" --watch contents --watch templates --watch assets --watch config.json",
     "serve": "cd dist && http-server -p 8000 -c-1",
-    "start": "npm run build && concurrently \"npm run dev\" \"npm run serve\" --kill-others",
-    "clean": "rimraf dist",
-    "clean:start": "npm run clean && npm start"
+    "start": "npm run clean && concurrently \"npm run dev\" \"npm run serve\" --kill-others",
+    "clean": "rimraf dist"
   },
   "keywords": [
     "static-site-generator",
